@@ -38,12 +38,12 @@ Bunkify is a fun, user-friendly web app that helps students calculate the number
    cd Bunkify 
 3. **Create & activate the Virtual Environment:**
    ```bash
-          python3 -m venv venv
-          source venv/bin/activate  # On Windows use `venv\Scripts\activate`       
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`       
 
 7. **Install Dependencies:**
    ```bash
-         pip install -r requirements.txt
+   pip install -r requirements.txt
 9. **Run the Application :**
     ```bash
-          flask --app app run
+   flask --app app run
