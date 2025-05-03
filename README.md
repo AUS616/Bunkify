@@ -32,7 +32,9 @@ Bunkify is a fun, user-friendly web app that helps students calculate the number
 ## 🛠 Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/bunkify.git 
+   git clone https://github.com/AUS616/Bunkify.git
+  
+   
 2. **Navigate to the Project Directory:**
     ```bash
    cd Bunkify 
