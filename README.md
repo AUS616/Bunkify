@@ -32,13 +32,12 @@ Case2:
 ## 🛠 Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/bunkify.git '''
+   git clone https://github.com/yourusername/bunkify.git 
 2. **Navigate to the Project Directory:**
     ```bash
-   cd Bunkify '''
+   cd Bunkify 
 3. **Create a Virtual Environment:**
-  ```bash
-    python -m venv '''
+    python -m venv
 5. **Activate the Virtual Environment:**
 
 6. **Install Dependencies:**
