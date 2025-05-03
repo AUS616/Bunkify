@@ -27,7 +27,7 @@ Case2:
 Case1:
 ![Calculation Result](assests/Bunkify3.png)
 Case2:
-![Calculation Result2](assests/Bunkify5.png
+![Calculation Result2](assests/Bunkify5.png)
 ## 🛠 Installation
 1. **Clone the Repository**:
    ```bash
