@@ -1,6 +1,6 @@
 # Bunkify 🎓
 
-Bunkify is a fun, user-friendly web app that helps students calculate the number of classes they can bunk while maintaining a specific attendance percentage.
+Bunkify is a Cartoony-themed web app that helps students calculate the number of classes they can bunk while maintaining a specific attendance percentage.
 
 
 ##  Features
