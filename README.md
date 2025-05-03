@@ -14,20 +14,21 @@ Bunkify is a fun, user-friendly web app that helps students calculate the number
 ##  Screenshots
 
 ### Home Screen:
-![Home Screen](assests/Bunkify1.png)
+![Home Screen](assets/Bunkify1.png)
 
 ### Input Classes:
 Case1:
-![Input Classes](assests/Bunkify2.png)
+![Input Classes](assets/Bunkify2.png)
+<br>
 Case2:
-![Input2 Classes](assests/Bunkify4.png)
+![Input2 Classes](assets/Bunkify4.png)
 
 
 ### Bunk Calculation Result:
 Case1:
-![Calculation Result](assests/Bunkify3.png)
+![Calculation Result](assets/Bunkify3.png)
 Case2:
-![Calculation Result2](assests/Bunkify5.png)
+![Calculation Result2](assets/Bunkify5.png)
 ## 🛠 Installation
 1. **Clone the Repository**:
    ```bash
