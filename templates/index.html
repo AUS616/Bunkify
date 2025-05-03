@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUNKIFY</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+<body class="bg-[#D8D2C2]">
+    <div class="flex flex-col items-center justify-center">
+        <h1 class="text-6xl font-bold text-[#F5A00C] mt-8 mb-10">Bunkify</h1>
+        
+        <div class="max-w-lg w-full bg-[#FFD04A] rounded-2xl border-4 border-black pt-5 pb-5 p-4 md:p-6 ">
+          
+            <form  method="POST">
+              <!-- entries -->
+                <div class="form-group mb-4 ">
+                    <label class="text-2xl text-black font-bold" for="total_classes">Total Number of Classes:</label>
+                    <input class="w-full bg-[#AADFE7] border-3 border-black rounded-xl md:rounded-2xl text-xl md:text-3xl text-black p-2 md:p-3 focus:outline-none cursor-text transition-all" type="text" id="total_classes" name="total_classes" >
+                    
+                </div>
+                
+                <div class="form-group">
+                    <label class="text-2xl text-black font-bold" for="classes_attended">Classes Attended:</label>
+                    <input class="w-full bg-[#AADFE7] border-3 border-black rounded-xl md:rounded-2xl text-xl md:text-3xl text-black p-2 md:p-3 focus:outline-none cursor-text transition-all " type="text" id="classes_attended" name="classes_attended">
+                </div>
+                <!-- Min percentage buttons -->
+                <h2 class="text-2xl text-black font-bold mt-4">The min required percentage: </h2>
+                <div class="flex flex-wrap items-center justify-between gap-2 mt-2">
+                  <button type="button" class="percentage-btn flex items-center justify-center bg-[#FAF9F5] text-[#F35229] hover:bg-[#F35229] hover:text-white focus:bg-[#F35229] focus:text-white active:bg-[#F35229] active:text-white border-3 border-black px-4 py-3 rounded-3xl transition-colors flex-grow text-center" data-value="70">
+                    <span class="font-medium">70%</span>
+                  </button>
+                  <button type="button" class="percentage-btn flex items-center justify-center bg-[#FAF9F5] text-[#F35229] hover:bg-[#F35229] hover:text-white focus:bg-[#F35229] focus:text-white active:bg-[#F35229] active:text-white border-3 border-black px-4 py-3 rounded-3xl transition-colors flex-grow text-center" data-value="75">
+                    <span class="font-medium">75%</span>
+                  </button>
+                  <button type="button" class="percentage-btn flex items-center justify-center bg-[#FAF9F5] text-[#F35229] hover:bg-[#F35229] hover:text-white focus:bg-[#F35229] focus:text-white active:bg-[#F35229] active:text-white border-3 border-black px-4 py-3 rounded-3xl transition-colors flex-grow text-center active" data-value="80">
+                    <span class="font-medium">80%</span>
+                  </button>
+                  <button type="button" class="percentage-btn flex items-center justify-center bg-[#FAF9F5] text-[#F35229] hover:bg-[#F35229] hover:text-white focus:bg-[#F35229] focus:text-white active:bg-[#F35229] active:text-white border-3 border-black px-4 py-3 rounded-3xl transition-colors flex-grow text-center" data-value="85">
+                    <span class="font-medium">85%</span>
+                  </button>
+                  <button type="button" class="percentage-btn flex items-center justify-center bg-[#FAF9F5] text-[#F35229] hover:bg-[#F35229] hover:text-white focus:bg-[#F35229] focus:text-white active:bg-[#F35229] active:text-white border-3 border-black px-4 py-3 rounded-3xl transition-colors flex-grow text-center" data-value="90">
+                    <span class="font-medium">90%</span>
+                  </button>
+                </div>
+
+                <!-- Result + hidden input -->
+                <input type="hidden" id="selected_percentage" name="min_percentage" value="75">
+                {% if attendance_percentage is not none %}
+                  <div class="max-w-md w-full bg-[#AADFE7] rounded-2xl  p-6 mt-2">
+                    <div class="result">
+                      <h2 class=" text-3xl pb-5">Hi fellow user!</h2>
+                      <p>Your current percentage: <span class="percentage bg-[#FDAA10] rounded-2xl px-2 py-1 ">{{ attendance_percentage | round(2) }}%</span></p>
+                      <p class="status">{{ status }}</p>
+                      {% if bunkable_classes is not none %}
+                        <p>You can bunk <span class="percentage bg-[#FDAA10] rounded-2xl px-2 py-1 ">{{ bunkable_classes }}</span> classes.</p>
+                      {% else %}
+                  
+                        <p>Oops! You have to attend  <span class="percentage bg-[#FDAA10] rounded-2xl px-2 py-1 ">{{ attend_classes }}</span> classes.</p>
+
+                      {% endif %}  
+                    </div>
+                  </div>
+                  
+                {% endif %}
+                <div class="mt-6">
+                  <button type="submit" class="w-full bg-[#F3532A]  hover:bg-[#d64924] cursor-pointer text-black font-bold py-3 px-4 rounded-3xl border-3 border-black">
+                    Calculate
+                  </button>
+                </div>
+                
+                  
+               
+            </form>
+            
+        
+        </div>
+        
+
+    </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    
+    const percentageButtons = document.querySelectorAll('.percentage-btn');
+    const selectedPercentageInput = document.getElementById('selected_percentage');
+    
+    
+    percentageButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        
+        percentageButtons.forEach(btn => {
+          btn.classList.remove('active');
+          btn.classList.remove('bg-[#D97756]');
+          btn.classList.remove('text-[#FAF9F5]');
+          btn.classList.add('bg-[#FAF9F5]');
+          btn.classList.add('text-[#D97756]');
+        });
+        
+        
+        this.classList.add('active');
+        this.classList.remove('bg-[#FAF9F5]');
+        this.classList.remove('text-[#D97756]');
+        this.classList.add('bg-[#D97756]');
+        this.classList.add('text-[#FAF9F5]');
+        
+        
+        selectedPercentageInput.value = this.getAttribute('data-value');
+      });
+    });
+  });
+
+  </script>
+
+  <footer>
+    <div class="flex flex-col justify-center items-center mt-10 mb-5">
+        <p class="text-lg text-black font-bold">Developed by <a class="underline decoration-dotted hover:text-[#F3532A]" href="https://github.com/AUS616">Aus616</a></p>
+        
+  </footer>
+
+
+    
+    
+</body>
+</html>

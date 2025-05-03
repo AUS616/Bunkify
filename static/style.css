@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Comic';
+    src: url('/static/fonts/KOMIKAX_.ttf');
+}
+@font-face {
+    font-family: 'Comic-sans';
+    src: url('/static/fonts/comicz.ttf');
+}
+
+h1{
+    font-family: 'Comic';
+    -webkit-text-stroke: 4px black;
+
+}
+
+label,input,p,h2{
+    font-family: 'Comic-sans';
+}
