@@ -3,7 +3,7 @@
 Bunkify is a fun, user-friendly web app that helps students calculate the number of classes they can bunk while maintaining a specific attendance percentage.
 
 
-## 🚀 Features
+##  Features
 
 - Simple input fields for total and attended classes.
 - Interactive percentage buttons to set attendance thresholds (70%, 75%, 80%, etc.).
@@ -11,7 +11,7 @@ Bunkify is a fun, user-friendly web app that helps students calculate the number
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Home Screen:
 ![Home Screen](~/Downloads/Bunkify1.png)
@@ -36,9 +36,14 @@ Case2:
 2. **Navigate to the Project Directory:**
     ```bash
    cd Bunkify 
-3. **Create a Virtual Environment:**
-    python -m venv
-5. **Activate the Virtual Environment:**
+3. **Create & activate the Virtual Environment:**
+   ```bash
+          python3 -m venv venv
+          source venv/bin/activate  # On Windows use `venv\Scripts\activate`       
 
-6. **Install Dependencies:**
-7. **Run the Application :**
+7. **Install Dependencies:**
+   ```bash
+         pip install -r requirements.txt
+9. **Run the Application :**
+    ```bash
+          flask --app app run
