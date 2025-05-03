@@ -17,17 +17,17 @@ Bunkify is a fun, user-friendly web app that helps students calculate the number
 ![Home Screen](assets/Bunkify1.png)
 
 ### Input Classes:
-Case1:
+## Case1:
 ![Input Classes](assets/Bunkify2.png)
-<br>
-Case2:
+
+## Case2:
 ![Input2 Classes](assets/Bunkify4.png)
 
 
 ### Bunk Calculation Result:
-Case1:
+## Case1:
 ![Calculation Result](assets/Bunkify3.png)
-Case2:
+## Case2:
 ![Calculation Result2](assets/Bunkify5.png)
 ## 🛠 Installation
 1. **Clone the Repository**:
