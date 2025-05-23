@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 </head>
-<body class="bg-[#D8D2C2] min-h-screen px-4 py-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col items-center justify-center min-h-screen ">
+<body class="bg-[#D8D2C2] h-screen overflow-hidden px-4 sm:px-6 lg:px-8 flex flex-col">
+    <div class="flex-1 flex flex-col items-center justify-center">
         <h1 class="text-6xl font-bold text-[#F5A00C] mt-8 mb-10">Bunkify</h1>
         
         <div class="w-full max-w-sm sm:max-w-md lg:max-w-lg bg-[#FFD04A] rounded-2xl border-4 border-black pt-4 sm:pt-5 pb-4 sm:pb-5 p-3 sm:p-4 md:p-6 ">
@@ -115,15 +115,14 @@
 
   </script>
 
-  <footer>
-       <div class="flex flex-col justify-center items-center mt-6 sm:mt-8 lg:mt-10 mb-4 sm:mb-5 px-4">
-                <p class="text-sm sm:text-base lg:text-lg text-white font-bold text-center">
-                    Developed by 
+ <footer>
+        <div class="flex flex-col justify-center items-center py-1">
+            <p class="text-sm sm:text-base text-white font-bold text-center">
+                Developed by 
                 <a class="underline decoration-dotted hover:text-[#F3532A] transition-colors" href="https://github.com/AUS616">Aus616</a>
             </p>
         </div>
-        
-  </footer>
+</footer>
 
 
     
