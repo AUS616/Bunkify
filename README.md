@@ -16,19 +16,7 @@ Bunkify is a Cartoony-themed web app that helps students calculate the number of
 ### Home Screen:
 ![Home Screen](assets/Bunkify1.png)
 
-### Input Classes:
-## Case1:
-![Input Classes](assets/Bunkify2.png)
 
-## Case2:
-![Input2 Classes](assets/Bunkify4.png)
-
-
-### Bunk Calculation Result:
-## Case1:
-![Calculation Result](assets/Bunkify3.png)
-## Case2:
-![Calculation Result2](assets/Bunkify5.png)
 ## 🛠 Installation
 1. **Clone the Repository**:
    ```bash
