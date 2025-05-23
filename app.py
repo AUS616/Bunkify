@@ -23,11 +23,11 @@ def home():
             attend_classes = math.ceil(total_classes * (min_percentage/100))
             
             if attendance_percentage >= min_percentage:
-                status = "You are eligible to sit in the exam."
+                status = "You are eligible to sit for the exam."
                 
 
             else:
-                status = "You are not eligible to sit in the exam."
+                status = "You are not eligible to sit for the exam."
                 bunkable_classes = None
 
 
