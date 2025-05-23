@@ -36,3 +36,7 @@ def home():
             status = "Please enter valid numbers for total classes and classes attended."
             attendance_percentage = None
     return render_template('index.html', attendance_percentage=attendance_percentage, status=status, selected_attendance=selected_attendance,bunkable_classes=bunkable_classes,attend_classes=attend_classes)
+
+
+if __name__ == "__main__":
+    app.run()
