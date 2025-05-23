@@ -11,7 +11,7 @@ Bunkify is a Cartoony-themed web app that helps students calculate the number of
 
 ---
 
-##  Screenshots
+
 
 ### Home Screen:
 ![Home Screen](assets/Bunkify1.png)
